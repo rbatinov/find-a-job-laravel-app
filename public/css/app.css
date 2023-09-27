@@ -1,0 +1,102 @@
+:root{
+    --main-gradient: linear-gradient(to right, #F15F79, #B24592);
+    --main-gradient-inverse: linear-gradient(to left, #F15F79, #B24592);
+    
+    --main-radius: 10px;
+    --md-font-size: 1.7rem;
+
+    /* linear-gradient(to right, #F15F79, #B24592); */
+    /* linear-gradient(to left, #fff802, #ff3302) */
+    
+    
+}
+
+.listingTags li{
+    background:var(--main-gradient);
+}
+
+.listingTags li a{
+    font-size: var(--md-font-size);
+    padding: 10px;
+}
+
+.listingTags li:hover{
+    background: var(--main-gradient-inverse)!important;
+    transition: 0.5s;
+    box-shadow: 0px 0px 10px #8e0393;
+}
+
+.main-gradient{
+    background: var(--main-gradient)!important;
+}
+
+/* .main-gradient:hover{
+    background: var(--main-gradient-inverse)!important;
+} */
+
+.bgc-main-gradient{
+    background-color: var(--main-gradient)!important;
+}
+
+nav{
+    box-shadow: 0px 1px 10px #520355;
+    z-index: 9999;
+    position: sticky;
+}
+
+.sticky{
+    box-shadow: 0px 1px 10px #520355;
+    z-index: 9999;
+
+    background: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.x-card:hover{
+    box-shadow: 0px 0px 30px #8e0393!important;
+    transition: 0.5s;
+}
+
+.x-card h3 a, .x-card h3{
+    font-weight: bold;
+    font-size: var(--md-font-size);
+    color: #B24592;
+    text-decoration: underline;
+}
+
+.x-card h3 a:hover{
+    font-weight: bold;
+    font-size: var(--md-font-size);
+    color: #a21c7a;
+    text-decoration: underline;
+}
+
+.c-purple{
+    color: #B24592;
+}
+
+.btn-gradient{
+    background: var(--main-gradient)!important;
+    color: white;
+    padding: 10px;
+    border-radius: var(--main-radius);
+    font-weight: bold;
+}
+
+.btn-gradient:hover{
+    background: var(--main-gradient-inverse)!important;
+    color: white;
+    padding: 10px;
+    border-radius: var(--main-radius);
+    font-weight: bold;
+    box-shadow: 0px 0px 10px #8e0393!important;
+
+}
+
+.custom-input:focus{
+    box-shadow: 0px 0px 10px #8e0393!important;   
+    transition: 0.5s;
+}
