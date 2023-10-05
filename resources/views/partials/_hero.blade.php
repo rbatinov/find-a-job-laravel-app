@@ -2,23 +2,34 @@
         >
             <div
                 class="absolute top-0 left-0 w-full h-full opacity-10 bg-no-repeat bg-center"
-                style="background-image: url('images/laravel-logo.png')"
+                
             ></div>
 
             <div class="z-10">
+               
+                <hr style="width:20%; margin-left:auto; margin-right:auto; margin-top:10px;">
+
                 <h1 class="text-6xl font-bold uppercase text-white">
-                    Find<span class="text-black" style="color: #431571; ">Job</span>
+                    {{ __('labels.l_find') }}<span style="text-transform:none;">{{ __('labels.l_a') }}</span><span class="text-black" style="color: #431571; ">{{ __('labels.l_job') }}</span>
                 </h1>
                 <hr style="width:20%; margin-left:auto; margin-right:auto; margin-top:10px;">
                 <p class="text-2xl text-gray-200 font-bold my-4">
-                    Find or post jobs
+                    {{ __('labels.l_hero_subhead') }}
                 </p>
                 <div>
-                    <a
-                        href="register.html"
-                        class="inline-block border-2 border-white text-white py-2 px-4 rounded-xl uppercase mt-2 hover:text-black hover:border-black"
-                        >Sign Up to Create a Job</a
-                    >
+                    @auth
+                        <a
+                            href="{{ route('listings_create_form_url') }}"
+                            class="inline-block border-2 border-white text-white py-2 px-4 rounded-xl uppercase mt-2 btn-dark-purple"
+                            >{{ __('labels.l_post_job') }}</a
+                        >
+                    @else
+                        <a
+                            href="{{ route('register_form_url') }}"
+                            class="inline-block border-2 border-white text-white py-2 px-4 rounded-xl uppercase mt-2 btn-dark-purple"
+                            >{{ __('labels.l_hero_btn') }}</a
+                        >
+                    @endauth
                 </div>
             </div>
         </section>
