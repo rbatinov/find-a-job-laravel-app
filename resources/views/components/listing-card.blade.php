@@ -1,6 +1,5 @@
 @props(['listing', 'rowNumber'])
 
-{{ dd($listing) }}
 <x-card>
     <div class="flex">
         <div 
