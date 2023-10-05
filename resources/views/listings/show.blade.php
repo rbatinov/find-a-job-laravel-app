@@ -1,4 +1,5 @@
 <x-layout>
+
     
     <x-back-button :routeName="'home_url'"></x-back-button>
     
@@ -47,7 +48,8 @@
         </div>
     </x-card>
 
-    @if($listing->user_id == auth()->user()->id){
+    @auth
+    @if($listing->user_id == auth()->user()->id)
         <x-card class="mt-4 p-2 flex space-x-6">
             <a href="{{ route('listing_edit_form_url', ['listing' => $listing->id ] ) }}"><i class="fa-solid fa-pencil"></i> {{ __('labels.l_edit') }}</a>
 
@@ -57,6 +59,7 @@
                 <button class="text-dash-red-500"><i class="fa-solid fa-trash"></i>{{ __('labels.l_delete') }}</button>
             </form>
         </x-card>
-    }
+    
     @endif
+    @endauth
 </x-layout>
