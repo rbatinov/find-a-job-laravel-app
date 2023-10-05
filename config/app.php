@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Lion Jobs'),
 
     /*
     |--------------------------------------------------------------------------
@@ -53,6 +53,8 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
+    'home_url' => env('HOME_URL', '/'),
+
 
     'asset_url' => env('ASSET_URL', null),
 
@@ -108,6 +110,19 @@ return [
 
     'faker_locale' => 'en_US',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Available locales
+    |--------------------------------------------------------------------------
+    |
+    | List all locales that your application works with
+    |
+    */
+    'available_locales' => [
+        'l_english' => 'en',
+        'l_bulgarian' => 'bg',
+    ],
+    
     /*
     |--------------------------------------------------------------------------
     | Encryption Key
