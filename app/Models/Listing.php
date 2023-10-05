@@ -46,7 +46,8 @@ class Listing extends Model
         }
 
         if($filters['search'] ?? false){
-            $query->join('companies', 'companies.id', '=', 'listings.company_id')->where('title', 'like', '%'. request('search') .'%')
+            $query
+                //->join('companies', 'companies.id', '=', 'listings.company_id')->where('title', 'like', '%'. request('search') .'%')
                 ->orWhere('description', 'like', '%'. request('search') .'%')
                 ->orWhere('tags', 'like', '%'. request('search') .'%')
                 //->orWhere('companies.name', 'like', '%'. request('search') .'%')
