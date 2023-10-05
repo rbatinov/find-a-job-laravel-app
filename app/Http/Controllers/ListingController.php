@@ -19,7 +19,7 @@ class ListingController extends Controller
     {
         return view('listings.index', [
             'heading' => 'Latest Listings', 
-            'listings' => Listing::with('company')->latest('listings.created_at')->filter(request(['tag', 'search']))->paginate(10)
+            'listings' => Listing::latest('listings.created_at')->filter(request(['tag', 'search']))->paginate(10)
         ]);
     }
 
