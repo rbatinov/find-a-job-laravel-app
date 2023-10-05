@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Listing;
+use App\Models\Company;
 use Illuminate\Database\Seeder;
 
-class ListingSeeder extends Seeder
+class CompanySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,7 +16,9 @@ class ListingSeeder extends Seeder
     {
         $max = 100;
         for($i=0; $i<=$max; $i++){
-            Listing::factory()->create();
+            Company::factory()->create();
         }
+        
+        
     }
 }
